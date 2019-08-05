@@ -1,9 +1,10 @@
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
     <side-bar
+            logo="img/brand/logow.png"
       :background-color="sidebarBackground"
-      short-title="Argon"
-      title="Argon"
+      short-title="Console"
+      title="W&C"
     >
       <template slot="links">
         <sidebar-item
@@ -24,7 +25,7 @@
       </template>
     </side-bar>
     <div class="main-content" :data="sidebarBackground">
-      <dashboard-navbar></dashboard-navbar>
+<!--      <dashboard-navbar></dashboard-navbar>-->
 
       <div @click="toggleSidebar">
         <fade-transition :duration="200" origin="center top" mode="out-in">
@@ -43,7 +44,6 @@
 
   export default {
     components: {
-      DashboardNavbar,
       ContentFooter,
       FadeTransition
     },
